@@ -12,7 +12,7 @@ class Land(MagicCard):
 
 
 class BasicLandType:
-    PLAIN = "Plains"
+    PLAINS = "Plains"
     ISLAND = "Island"
     SWAMP = "Swamp"
     MOUNTAIN = "Mountain"
@@ -25,7 +25,7 @@ class BasicLand(Land):
         super().__init__(subtype, "Basic Land", subtype=subtype)
 
     def tap(self):
-        if self.subtype == BasicLandType.PLAIN:
+        if self.subtype == BasicLandType.PLAINS:
             return Mana.WHITE
         elif self.subtype == BasicLandType.ISLAND:
             return Mana.BLUE
